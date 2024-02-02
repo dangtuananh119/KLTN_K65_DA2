@@ -1,0 +1,2 @@
+my_sub
+-DCATKIN_DEVEL_PREFIX=/home/thuongdx/sub_ar/devel -DCMAKE_INSTALL_PREFIX=/home/thuongdx/sub_ar/install -G Unix Makefiles

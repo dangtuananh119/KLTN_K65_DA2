@@ -1,0 +1,8 @@
+prefix=/home/thuongdx/sub_ar/install
+
+Name: my_sub
+Description: Description of my_sub
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
