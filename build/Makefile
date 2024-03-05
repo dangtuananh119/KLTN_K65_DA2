@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/thuongdx/sub_ar/src
+CMAKE_SOURCE_DIR = /home/thuongdx/sub_ros/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/thuongdx/sub_ar/build
+CMAKE_BINARY_DIR = /home/thuongdx/sub_ros/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -137,9 +137,9 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/thuongdx/sub_ar/build/CMakeFiles /home/thuongdx/sub_ar/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thuongdx/sub_ros/build/CMakeFiles /home/thuongdx/sub_ros/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/thuongdx/sub_ar/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thuongdx/sub_ros/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -610,6 +610,19 @@ my_sub_genpy/fast:
 .PHONY : my_sub_genpy/fast
 
 #=============================================================================
+# Target rules for targets named angle
+
+# Build rule for target.
+angle: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 angle
+.PHONY : angle
+
+# fast build rule for target.
+angle/fast:
+	$(MAKE) -f my_sub/CMakeFiles/angle.dir/build.make my_sub/CMakeFiles/angle.dir/build
+.PHONY : angle/fast
+
+#=============================================================================
 # Target rules for targets named sub
 
 # Build rule for target.
@@ -682,6 +695,7 @@ help:
 	@echo "... my_sub_generate_messages_nodejs"
 	@echo "... my_sub_gennodejs"
 	@echo "... my_sub_genpy"
+	@echo "... angle"
 	@echo "... sub"
 	@echo "... rosgraph_msgs_generate_messages_cpp"
 .PHONY : help

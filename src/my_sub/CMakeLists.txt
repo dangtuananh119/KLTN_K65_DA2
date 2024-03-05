@@ -206,5 +206,8 @@ include_directories(
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
 add_executable(sub src/sub.cpp)
+add_executable(angle src/angle.cpp)
 target_link_libraries(sub ${catkin_LIBRARIES})
+target_link_libraries(angle ${catkin_LIBRARIES})
 add_dependencies(sub my_sub_generate_messages_cpp)
+add_dependencies(angle my_sub_generate_messages_cpp)

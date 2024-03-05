@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "/home/thuongdx/sub_ar/devel/share/roseus/ros/my_sub/manifest.l"
+  "/home/thuongdx/sub_ros/devel/share/roseus/ros/my_sub/manifest.l"
   "CMakeFiles/my_sub_generate_messages_eus"
 )
 

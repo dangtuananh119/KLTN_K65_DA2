@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/thuongdx/sub_ar/src/my_sub/src/sub.cpp
+/home/thuongdx/sub_ros/src/my_sub/src/sub.cpp
 ros/ros.h
 -
 std_msgs/Int32.h

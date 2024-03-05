@@ -1,4 +1,4 @@
-prefix=/home/thuongdx/sub_ar/devel
+prefix=/home/thuongdx/sub_ros/devel
 
 Name: my_sub
 Description: Description of my_sub

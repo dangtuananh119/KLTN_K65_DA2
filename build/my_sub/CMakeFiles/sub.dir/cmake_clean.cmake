@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/thuongdx/sub_ar/devel/lib/my_sub/sub"
-  "/home/thuongdx/sub_ar/devel/lib/my_sub/sub.pdb"
+  "/home/thuongdx/sub_ros/devel/lib/my_sub/sub"
+  "/home/thuongdx/sub_ros/devel/lib/my_sub/sub.pdb"
   "CMakeFiles/sub.dir/src/sub.cpp.o"
 )
 

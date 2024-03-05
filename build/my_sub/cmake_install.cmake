@@ -1,8 +1,8 @@
-# Install script for directory: /home/thuongdx/sub_ar/src/my_sub
+# Install script for directory: /home/thuongdx/sub_ros/src/my_sub
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/thuongdx/sub_ar/install")
+  set(CMAKE_INSTALL_PREFIX "/home/thuongdx/sub_ros/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,37 +38,37 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/my_sub/cmake" TYPE FILE FILES "/home/thuongdx/sub_ar/build/my_sub/catkin_generated/installspace/my_sub-msg-paths.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/my_sub/cmake" TYPE FILE FILES "/home/thuongdx/sub_ros/build/my_sub/catkin_generated/installspace/my_sub-msg-paths.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/thuongdx/sub_ar/devel/share/roseus/ros/my_sub")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/thuongdx/sub_ros/devel/share/roseus/ros/my_sub")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  execute_process(COMMAND "/usr/bin/python3" -m compileall "/home/thuongdx/sub_ar/devel/lib/python3/dist-packages/my_sub")
+  execute_process(COMMAND "/usr/bin/python3" -m compileall "/home/thuongdx/sub_ros/devel/lib/python3/dist-packages/my_sub")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3/dist-packages" TYPE DIRECTORY FILES "/home/thuongdx/sub_ar/devel/lib/python3/dist-packages/my_sub")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3/dist-packages" TYPE DIRECTORY FILES "/home/thuongdx/sub_ros/devel/lib/python3/dist-packages/my_sub")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/thuongdx/sub_ar/build/my_sub/catkin_generated/installspace/my_sub.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/thuongdx/sub_ros/build/my_sub/catkin_generated/installspace/my_sub.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/my_sub/cmake" TYPE FILE FILES "/home/thuongdx/sub_ar/build/my_sub/catkin_generated/installspace/my_sub-msg-extras.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/my_sub/cmake" TYPE FILE FILES "/home/thuongdx/sub_ros/build/my_sub/catkin_generated/installspace/my_sub-msg-extras.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/my_sub/cmake" TYPE FILE FILES
-    "/home/thuongdx/sub_ar/build/my_sub/catkin_generated/installspace/my_subConfig.cmake"
-    "/home/thuongdx/sub_ar/build/my_sub/catkin_generated/installspace/my_subConfig-version.cmake"
+    "/home/thuongdx/sub_ros/build/my_sub/catkin_generated/installspace/my_subConfig.cmake"
+    "/home/thuongdx/sub_ros/build/my_sub/catkin_generated/installspace/my_subConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/my_sub" TYPE FILE FILES "/home/thuongdx/sub_ar/src/my_sub/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/my_sub" TYPE FILE FILES "/home/thuongdx/sub_ros/src/my_sub/package.xml")
 endif()
 

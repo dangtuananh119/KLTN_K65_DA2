@@ -43,25 +43,25 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/thuongdx/sub_ar/src
+CMAKE_SOURCE_DIR = /home/thuongdx/sub_ros/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/thuongdx/sub_ar/build
+CMAKE_BINARY_DIR = /home/thuongdx/sub_ros/build
 
 # Utility rule file for my_sub_generate_messages_eus.
 
 # Include the progress variables for this target.
 include my_sub/CMakeFiles/my_sub_generate_messages_eus.dir/progress.make
 
-my_sub/CMakeFiles/my_sub_generate_messages_eus: /home/thuongdx/sub_ar/devel/share/roseus/ros/my_sub/manifest.l
+my_sub/CMakeFiles/my_sub_generate_messages_eus: /home/thuongdx/sub_ros/devel/share/roseus/ros/my_sub/manifest.l
 
 
-/home/thuongdx/sub_ar/devel/share/roseus/ros/my_sub/manifest.l: /opt/ros/noetic/lib/geneus/gen_eus.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/thuongdx/sub_ar/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating EusLisp manifest code for my_sub"
-	cd /home/thuongdx/sub_ar/build/my_sub && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py -m -o /home/thuongdx/sub_ar/devel/share/roseus/ros/my_sub my_sub std_msgs
+/home/thuongdx/sub_ros/devel/share/roseus/ros/my_sub/manifest.l: /opt/ros/noetic/lib/geneus/gen_eus.py
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/thuongdx/sub_ros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating EusLisp manifest code for my_sub"
+	cd /home/thuongdx/sub_ros/build/my_sub && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py -m -o /home/thuongdx/sub_ros/devel/share/roseus/ros/my_sub my_sub std_msgs
 
 my_sub_generate_messages_eus: my_sub/CMakeFiles/my_sub_generate_messages_eus
-my_sub_generate_messages_eus: /home/thuongdx/sub_ar/devel/share/roseus/ros/my_sub/manifest.l
+my_sub_generate_messages_eus: /home/thuongdx/sub_ros/devel/share/roseus/ros/my_sub/manifest.l
 my_sub_generate_messages_eus: my_sub/CMakeFiles/my_sub_generate_messages_eus.dir/build.make
 
 .PHONY : my_sub_generate_messages_eus
@@ -72,10 +72,10 @@ my_sub/CMakeFiles/my_sub_generate_messages_eus.dir/build: my_sub_generate_messag
 .PHONY : my_sub/CMakeFiles/my_sub_generate_messages_eus.dir/build
 
 my_sub/CMakeFiles/my_sub_generate_messages_eus.dir/clean:
-	cd /home/thuongdx/sub_ar/build/my_sub && $(CMAKE_COMMAND) -P CMakeFiles/my_sub_generate_messages_eus.dir/cmake_clean.cmake
+	cd /home/thuongdx/sub_ros/build/my_sub && $(CMAKE_COMMAND) -P CMakeFiles/my_sub_generate_messages_eus.dir/cmake_clean.cmake
 .PHONY : my_sub/CMakeFiles/my_sub_generate_messages_eus.dir/clean
 
 my_sub/CMakeFiles/my_sub_generate_messages_eus.dir/depend:
-	cd /home/thuongdx/sub_ar/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/thuongdx/sub_ar/src /home/thuongdx/sub_ar/src/my_sub /home/thuongdx/sub_ar/build /home/thuongdx/sub_ar/build/my_sub /home/thuongdx/sub_ar/build/my_sub/CMakeFiles/my_sub_generate_messages_eus.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/thuongdx/sub_ros/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/thuongdx/sub_ros/src /home/thuongdx/sub_ros/src/my_sub /home/thuongdx/sub_ros/build /home/thuongdx/sub_ros/build/my_sub /home/thuongdx/sub_ros/build/my_sub/CMakeFiles/my_sub_generate_messages_eus.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : my_sub/CMakeFiles/my_sub_generate_messages_eus.dir/depend
 
