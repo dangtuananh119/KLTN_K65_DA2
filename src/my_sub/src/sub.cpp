@@ -43,7 +43,7 @@ int main(int argc, char** argv)
   {
     //Odometry
     float d_center = ((pulse_r+pulse_r)*0.5024)/200;
-    the_ta += yaw;
+    the_ta  = yaw;
     x      += d_center * cos(the_ta);
     y      += d_center * sin(the_ta);
     //ROS_INFO("Yaw: %f, Xungr: %d, Xungl: %d", yaw, xungr, xungl);
