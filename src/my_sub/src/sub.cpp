@@ -42,10 +42,10 @@ int main(int argc, char** argv)
   while (ros::ok())
   {
     //Odometry
-    float d_center = ((pulse_r+pulse_r)*0.5024)/200;
+    float d_center = ((pulse_r+pulse_l)*0.036)/200; // (m)
     the_ta  = yaw;
-    x      += d_center * cos(the_ta);
-    y      += d_center * sin(the_ta);
+    x       = d_center * cos(the_ta * 0.0174533);
+    y       = d_center * sin(the_ta * 0.0174533);
     //ROS_INFO("Yaw: %f, Xungr: %d, Xungl: %d", yaw, xungr, xungl);
 
     //Publish x,y,the_ta
