@@ -7,7 +7,7 @@ from std_msgs.msg import Header
 prev_odometry = np.array([0, 0, 0])
 curr_odometry = np.array([0, 0, 0])
 rate = 10   # Hz
-pose_pub = rospy.Publisher("no_flag_ekf_pose", TwistStamped, queue_size=10)
+pose_pub = rospy.Publisher("odometry_velocity", TwistStamped, queue_size=10)
 
 def publish_odo_velo(event):
     global prev_odometry, curr_odometry, rate
