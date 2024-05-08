@@ -6,21 +6,21 @@ from geometry_msgs.msg import PointStamped
 import message_filters
 
 class EKF:
-    def __init__(self, P, Q, R, sampling_time, wheel_distance, wheel_radius) -> None:
+     def __init__(self, P, Q, R, wheel_distance, wheel_radius) -> None:
         self.P = P
         self.Q = Q
         self.R = R
-        self.sampling_time = sampling_time
+        self.sampling_time = 0.1
         self.wheel_distance = wheel_distance
         self.wheel_radius = wheel_radius
-        self.ekf_pose = np.array([0, 0, 1.57])
-        self.measure_pose = np.array([0, 0, 1.57])
-        self.odometry_pose = np.array([0, 0, 1.57])
+        self.ekf_pose = np.array([0, 0, 0])
+        self.measure_pose = np.array([0, 0, 0])
+        self.odometry_pose = np.array([0, 0, 0])
         self.v, self.w = 0, 0
 
         self.point_pub = rospy.Publisher("no_flag_ekf_pose", Point, queue_size=10)
         self.mes_subscriber = message_filters.Subscriber("measured_pose", PointStamped)
-        self.odo_subscriber = message_filters.Subscriber("odometry_pose", PointStamped)
+        self.odo_subscriber = message_filters.Subscriber("odometry_velocity", TwistStamped)
         self.ts = message_filters.TimeSynchronizer([self.mes_subscriber, self.odo_subscriber], 10)
         self.ts.registerCallback(self.callback)
         
@@ -112,7 +112,7 @@ if __name__ == "__main__":
 
     try:
         rospy.init_node("ekf", anonymous=True)
-        EKF_process = EKF(P, Q, R, sampling_time, wheel_distance, wheel_radius)
+        EKF_process = EKF(P, Q, R, wheel_distance, wheel_radius)
         rospy.spin()
     except KeyboardInterrupt:
         print("Shutdown!")
