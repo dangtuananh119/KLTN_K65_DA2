@@ -71,11 +71,13 @@ class EKF:
         print()
 
     def callback(self, mes_msg, odo_msg):
-
         mes_pose = mes_msg.point
-        odo_pose = odo_msg.point
+        odo_pose = odo_msg.twist
         self.measure_pose = np.array([mes_pose.x, mes_pose.y, mes_pose.z])
-        self.odometry_pose = np.array([odo_pose.x, odo_pose.y, odo_pose.z])
+        self.odometry_pose = np.array([odo_pose.linear.x, odo_pose.linear.y, odo_pose.linear.z])
+        self.v = odo_pose.angular.x
+        self.w = odo_pose.angular.y
+        self.sampling_time = odo_pose.angular.z
 
         self.process_ekf()
 
