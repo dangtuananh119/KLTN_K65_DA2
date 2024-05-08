@@ -19,7 +19,7 @@ def publish_odo_velo(event):
     odo_velo = TwistStamped()
     odo_velo.header = Header()
     odo_velo.twist.linear = Vector3(curr_odometry[0], curr_odometry[1], curr_odometry[2])
-    odo_velo.twist.angular = Vector3(v, w, 0)
+    odo_velo.twist.angular = Vector3(v, w, 1/rate)
 
     pose_pub.publish(odo_velo)
     prev_odometry = curr_odometry
