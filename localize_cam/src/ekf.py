@@ -23,21 +23,10 @@ class EKF:
         self.odo_subscriber = message_filters.Subscriber("odometry_velocity", TwistStamped)
         self.ts = message_filters.TimeSynchronizer([self.mes_subscriber, self.odo_subscriber], 10)
         self.ts.registerCallback(self.callback)
-        
 
-    def get_current_velocity(self):
-        displacement = self.odometry_pose - self.ekf_pose
-        velocity = displacement / self.sampling_time
-        self.v = np.linalg.norm(velocity[0:2])
-        self.w = velocity[2]
-
-        # check velocity
-        print("Velocity: ", self.v, self.w)
-        
 
     def coefficient_matrices(self):
-        pos_est_T = self.ekf_pose[2]
-        self.get_current_velocity()
+        pos_est_T = self.odometry_pose[2]
 
         dS = self.sampling_time * self.v
         dTheta = self.sampling_time * self.w
@@ -49,9 +38,9 @@ class EKF:
                     [0, 1,  dS * np.cos(pos_est_T + dTheta/2)],
                     [0, 0,  1]])
         
-        self.W = self.sampling_time * self.wheel_radius * np.array([[np.cos(pos_est_T + dTheta/2) - (dS/self.wheel_distance)*np.sin(pos_est_T + dTheta/2), np.cos(pos_est_T + dTheta/2) + (dS/self.wheel_distance)*np.sin(pos_est_T + dTheta/2)],
+        self.W = self.sampling_time * self.wheel_radius / 2 * np.array([[np.cos(pos_est_T + dTheta/2) - (dS/self.wheel_distance)*np.sin(pos_est_T + dTheta/2), np.cos(pos_est_T + dTheta/2) + (dS/self.wheel_distance)*np.sin(pos_est_T + dTheta/2)],
                                                     [np.sin(pos_est_T + dTheta/2) + (dS/self.wheel_distance)*np.cos(pos_est_T + dTheta/2), np.sin(pos_est_T + dTheta/2) - (dS/self.wheel_distance)*np.cos(pos_est_T + dTheta/2)],
-                                                    [1/self.wheel_distance, 1/self.wheel_distance]])
+                                                    [2 / self.wheel_distance, 2 / self.wheel_distance]])
 
     def process_ekf(self):
         # 1. Prediction step
